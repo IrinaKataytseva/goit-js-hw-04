@@ -14,8 +14,14 @@
 // console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 // console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
 
-function calcAverageCalories(days) {
 
+function calcAverageCalories(days) {
+    let totalCalories = 0;
+    for (let i = 0; i < days.length; i++) {
+        totalCalories += days[i].calories;
+    }
+
+    return totalCalories / days.length;
 }
 
 console.log(
